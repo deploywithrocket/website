@@ -94,8 +94,8 @@ Adds properly-formatted instructions when the preset has been applied.
 import { Preset, color } from `use-preset`;
 
 Preset.instruct([
-	`Run ${color.magenta('yarn run')} to start development.`,
-	`Read the documentation at https://usepreset.dev.`,
+    `Run ${color.magenta('yarn run')} to start development.`,
+    `Read the documentation at https://usepreset.dev.`,
 ]);
 ```
 
@@ -106,7 +106,7 @@ This method returns an object which contains an additional method, `withHeading`
 import { Preset, color } from `use-preset`;
 
 Preset.instruct([
-	`Run ${color.magenta('yarn run')} to start development.`,
+    `Run ${color.magenta('yarn run')} to start development.`,
 ]).withHeading("What's next?");
 ```
 

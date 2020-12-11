@@ -1,5 +1,5 @@
 <template>
-	<icon height="auto" width="auto" :icon="icon" />
+    <icon height="auto" width="auto" :icon="icon" />
 </template>
 
 <script>
@@ -20,24 +20,24 @@ import book from '@iconify/icons-bx/bxs-book-alt';
 import heart from '@iconify/icons-heroicons-solid/heart';
 
 Object.entries({
-	menu,
-	cross,
-	twitter,
-	github,
-	discord,
-	dark: sunOutline,
-	light: sunSolid,
-	close,
-	leftArrow,
-	rightArrow,
-	chevronRight,
-	search,
-	book,
-	heart,
+    menu,
+    cross,
+    twitter,
+    github,
+    discord,
+    dark: sunOutline,
+    light: sunSolid,
+    close,
+    leftArrow,
+    rightArrow,
+    chevronRight,
+    search,
+    book,
+    heart,
 }).forEach(([name, icon]) => Icon.addIcon(name, icon));
 
 export default {
-	props: ['icon'],
-	components: { Icon },
+    props: ['icon'],
+    components: { Icon },
 };
 </script>

@@ -84,8 +84,8 @@ export default function(Vue, { router, head, isClient }) {
         next();
     });
 
-    const siteName = 'Preset';
-    const siteUrl = process.env.SITE_URL || 'https://usepreset.dev';
+    const siteName = 'Rocket';
+    const siteUrl = process.env.SITE_URL || 'https://deploywithrocket.dev';
 
     // Add meta properties for every route
     head.meta.push(

@@ -25,25 +25,13 @@
                     </a>
                 </div>
             </div>
-
-            <!-- Right -->
-            <div class="w-full space-y-8 text-lg lg:w-1/2">
-                <pre class="rounded-lg shadow-xl prism language-js"><code class="language-js">{{ code }}</code></pre>
-                <pre class="rounded-lg shadow-xl prism language-bash"><code class="language-bash">{{ command }}</code></pre>
-            </div>
         </section>
     </layout>
 </template>
 
-<style lang="postcss">
-@import '~prism-themes/themes/prism-nord.css';
-</style>
-
 <script>
 import Layout from '~/layouts/Site';
 import Icon from '@/components/Icon';
-import prism from 'prismjs';
-import stripIndent from 'strip-indent';
 
 export default {
     components: {
@@ -53,28 +41,10 @@ export default {
 
     metaInfo() {
         return {
-            title: `Preset - ${this.$static.metadata.siteDescription}`,
+            title: `Rocket - ${this.$static.metadata.siteDescription}`,
             titleTemplate: '%s',
         };
     },
-
-    data: () => ({
-        command: stripIndent(`npx use-preset my-username/my-preset`),
-        code: stripIndent(`
-            import { Preset } from 'use-preset'
-
-            // Extracts the preset's templates
-            Preset.extract()
-
-            // Updates the package.json file
-            Preset.editNodePackages()
-                .add('tailwindcss', '^2.0')
-                .remove('sass')
-
-            // Runs yarn or npm install
-            Preset.installDependencies()
-    `).trim(),
-    }),
 };
 </script>
 

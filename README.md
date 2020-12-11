@@ -1,12 +1,17 @@
-<p align="center">
-  <h1 align="center">Preset's website</h1>
-  <p align="center">
-    <a href="https://usepreset.dev">
-      <img alt="netlify" src="https://api.netlify.com/api/v1/badges/637d1b40-ac04-4811-adbf-a1ca6d63ca1f/deploy-status">
-    </a>
-  </p>
-  <br />
-  <p align="center">
-    <code>use-preset</code> is a scaffolding tool for developers. <a href="https://usepreset.dev/">Read the documentation</a> for more information.
-  </p>
-<p>
+<p align="center"><img src="./.github/header.jpg" alt="Rocket Header"></p>
+
+# Website
+
+![Netlify](https://img.shields.io/netlify/c5f8f02f-bf3d-4384-876d-995f704298ce?style=flat-square)
+
+This project contains the [Rocket](https://deploywithrocket.dev) project documentation website.
+
+## Documentation
+
+To learn more about Rocket and how to use it, please refer to the [official documentation](https://deploywithrocket.dev).
+
+## License
+
+Copyright (c) 2020 Simon Rubuano (@mgkprod) and contributors
+
+Licensed under the MIT license, see [LICENSE.md](LICENSE.md) for details.

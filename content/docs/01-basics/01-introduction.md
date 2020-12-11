@@ -6,28 +6,41 @@ search: ''
 
 ## Introduction
 
-Preset is a system that makes it easy to perform modifications on a freshly scaffolded project.
+Rocket is a free, open source and self-hostable deployment tool.
 
-It is distributed as a command line tool, which makes it accessible without installation thanks to [`npx`](https://www.npmjs.com/package/npx).
+Commit, push, your project is deployed! Rocket takes care of the deployment process on your server. 
+
+It can deploy any PHP or Javascript application, regardless of the framework, with or without dependencies or assets to build.
+
+Main features :
+
+* Built with modern technologies
+* Easy setup process
+* Simultaneous deployments (queues)
+* Agentless, it’s just SSH
+* Zero downtime deployments
+* Integrates with GitHub, with public or private repositories
+* Push to deploy
+* Shared directories and `cron` jobs sync
+* Ready to use presets for most frameworks (soon)
 
 ## Understanding the need
 
-If you are familiar with the concept of starter projects or boilerplates, this system is an alternative.
+In short: If you are familiar with online code deployment tools, this system is an alternative that bring the benefits of an online tool, for free.
 
 ### Problem
 
-The main issue with the concept of boilerplate is that, from the user point of view, it is hard to know what changed.
+Deployments are a hassle.
 
-The features of the boilerplate have to be well-documented, but even then, the user won't know exactly what files have been edited or removed for the boilerplate to work, unless it is also documented—which would be a lot of work.
+Eg. using Laravel, you're supposed to put your application into maintenance mode before deploying with `php artisan down`, pull in your code, clear caches, install packages, build assets, restart services, etc.
 
-As a maintainer, it can be hard as well to keep track of the changes that have been made to the original codebase. It can be easy to forget something in an update, and dead code can be introduced this way.
+While you wait, you run `sl` in another terminal. Finally you put the application back up. Sh*t! You forgot to run the migrations.
 
-Lastly, a project needs to be created from the boilerplate. You can't create a project like you usually do, then consume the boilerplate on top of it.
+### Partial solution
 
-It also means that if the boilerplate is not actively maintained compared to the project it is built for, it will quickly be out-of-date.
+Tools like [Deployer](https://deployer.org/) can automate deployment scenarios and run from your local environnement. To work successfully they need a configuration and have to be ran manually everytime you want to deploy your website.
 
-### Solution
+On the other hand, there are paid tools like [Envoyer.io](https://envoyer.io) that offer a higher level of automation by performing the deployment online, in a completely automated way for each push you do. Problem, these services are not free, or some with a free-tier which limits the number of projects.
 
-A preset, on the other hand, describes the exact changes needed for the features to be added. By reading the preset's code, you know the exact changes it brings.
 
-This solves the previous issue, and makes the maintenance easier, because the overhead caused by all of the files of a boilerplate is gone, and as a preset maintainer, you don't have to maintain every other single file that doesn't change in the preset but needs updates because the project on top of which the boilerplate is made is updated.
+!> Rocket provides the benefits from both tools without the cons.

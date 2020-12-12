@@ -8,7 +8,13 @@ search: ''
 
 !> TODO
 
-Here you can find some screenshots taken from the latest version of Rocket.
+Here you can find some screenshots taken from the **Rocket 0.7.0**.
+
+### Servers
+
+#### Connection
+
+![Server connection](/screenshots/server-connection.png)
 
 ### Project
 
@@ -22,6 +28,12 @@ Here you can find some screenshots taken from the latest version of Rocket.
 
 ![Project hooks settings page](/screenshots/project-settings-hooks.png)
 
-#### Deployments
+### Deployments
+
+#### Index
+
+![Deployments index](/screenshots/deployments.png)
+
+#### Resume
 
 ![Deployment resume page](/screenshots/deployment-resume.png)

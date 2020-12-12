@@ -1,16 +1,15 @@
 <template>
     <layout>
-        <section class="flex flex-col w-full px-12 lg:space-x-20 lg:items-center lg:flex-row lg:px-0">
-            <!-- Left -->
-            <div class="w-full mb-20 lg:w-1/2 lg:mb-0">
-                <h1 class="text-6xl font-bold leading-tight tracking-tight text-brand">
+        <section class="flex flex-col justify-center w-full px-12 lg:space-x-20 lg:items-center lg:px-0">
+            <div class="w-full mt-8 mb-24 md:mt-16">
+                <h1 class="text-6xl font-bold leading-tight tracking-tight text-center text-brand">
                     Rocket
                 </h1>
-                <p class="mt-4 text-2xl transition-colors duration-200 text-on-background-blockquote">
+                <p class="mt-4 text-2xl text-center transition-colors duration-200 text-on-background-blockquote">
                     The last project you will deploy.
                 </p>
 
-                <div class="flex">
+                <div class="flex justify-center">
                     <g-link
                         to="/docs/"
                         class="px-4 py-3 mt-8 mr-4 text-lg font-semibold transition-colors duration-200 rounded-lg shadow-md bg-brand text-on-brand"
@@ -25,6 +24,8 @@
                     </a>
                 </div>
             </div>
+
+            <img src="/screenshots/project-overview.png" alt="Project overview page" class="w-full rounded-lg shadow-lg">
         </section>
     </layout>
 </template>

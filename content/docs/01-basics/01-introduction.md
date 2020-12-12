@@ -8,21 +8,24 @@ search: ''
 
 Rocket is a free, open source and self-hostable deployment tool.
 
-Commit, push, your project is deployed! Rocket takes care of the deployment process on your server. 
+Commit, push, your project is deployed! Rocket takes care of the deployment process on your server.
 
 It can deploy any PHP or Javascript application, regardless of the framework, with or without dependencies or assets to build.
 
-Main features :
-
+* One time setup process
 * Built with modern technologies
-* Easy setup process
-* Simultaneous deployments (queues)
-* Agentless, it’s just SSH
+* Elegant beautiful interface
 * Zero downtime deployments
-* Integrates with GitHub, with public or private repositories
-* Push to deploy
-* Shared directories and `cron` jobs sync
+* Agentless, it’s just SSH
 * Ready to use presets for most frameworks (soon)
+* Integrates with GitHub with public or private repositories
+* Supports Push to deploy
+* Shared directories and `cron` jobs sync
+* Simultaneous deployments (queues)
+
+You can learn more about Rocket features in the [features page](/docs/basics/features).
+
+![Rocket project overview page](/screenshots/project-overview.png)
 
 ## Understanding the need
 

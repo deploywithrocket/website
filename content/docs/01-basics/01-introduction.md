@@ -23,8 +23,6 @@ It can deploy any PHP or Javascript application, regardless of the framework, wi
 * Shared directories and `cron` jobs sync
 * Simultaneous deployments (queues)
 
-You can learn more about Rocket features in the [features page](/docs/basics/features).
-
 ![Rocket project overview page](/screenshots/project-overview.png)
 
 ## Understanding the need

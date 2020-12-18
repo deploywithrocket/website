@@ -6,11 +6,11 @@ search: ''
 
 ## Server setup
 
-This guide contains the commands to install a Rocket-ready server but can also be used for any other Laravel project.
-
-!> This guide is intended for beginners. If you already know how to deploy a Laravel project, go to the [Deploying Rocket](/docs/installing/deploying-rocket) page.
+This guide contains copy-paste ready commands to install a LAMP stack (Linux, Apache, MySQL, PHP) with Rocket.
 
 It was written and tested on **Ubuntu 20.10** and should work on any system using apt.
+
+!> This guide is intended for beginners. If you already know how to install a Laravel project, go to the [Installing Rocket](/docs/installing/installing-rocket) page.
 
 ## Installing the packets
 
@@ -18,7 +18,7 @@ It was written and tested on **Ubuntu 20.10** and should work on any system usin
 
 ```bash
 sudo apt install \
-    git curl zip unzip sl \
+    git curl zip unzip \
     redis supervisor
 ```
 
@@ -35,14 +35,14 @@ Then install the web-server required packages
 
 ```bash
 sudo apt install \
-    apache2 php8.0 libapache2-mod-php \
-    php8.0-bcmath php8.0-cli php8.0-common php8.0-curl php8.0-fpm php8.0-gd php8.0-gmp php8.0-intl php8.0-mbstring php8.0-mysql php8.0-opcache php8.0-pgsql php8.0-readline php8.0-xml php8.0-zip php8.0-imagick php8.0-redis
+    apache2 php7.4 libapache2-mod-php \
+    php7.4-bcmath php7.4-cli php7.4-common php7.4-curl php7.4-fpm php7.4-gd php7.4-gmp php7.4-intl php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-pgsql php7.4-readline php7.4-xml php7.4-zip php7.4-imagick php7.4-redis
 ```
 
 ### Composer
 
 ```bash
-sudo wget https://getcomposer.org/download/2.0.0/composer.phar
+sudo wget https://getcomposer.org/download/2.0.8/composer.phar
 sudo chmod +x composer.phar
 sudo mv composer.phar /usr/bin/composer
 sudo composer self-update
@@ -66,14 +66,13 @@ sudo mysql_secure_installation
 
 Your server should be ready to run any PHP project.
 
-
 ## Configuration
 
 ### Cloning Rocket
 
 ```bash
 CURRENTUSER=$(whoami)
-sudo chmod 777 /var/www
+sudo chmod 775 /var/www
 sudo chown -R $CURRENTUSER:$CURRENTUSER /var/www
 
 mkdir -p /var/www/rocket/current
@@ -85,9 +84,8 @@ composer install --no-dev
 yarn
 yarn prod
 php artisan key:generate
-php artisan migrate --seed
 php artisan storage:link
-chmod 777 -R storage bootstrap/cache
+chmod 775 -R storage bootstrap/cache
 ```
 
 ### Create the database
@@ -150,7 +148,7 @@ autorestart=true
 user=www-data
 numprocs=4
 redirect_stderr=true
-stdout_logfile=/var/www/rocket/storage/logs/worker.log
+stdout_logfile=/var/www/rocket/current/storage/logs/worker.log
 ```
 
 ```bash

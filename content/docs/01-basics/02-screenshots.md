@@ -6,9 +6,7 @@ search: ''
 
 ## Screenshots
 
-!> TODO
-
-Here you can find some screenshots taken from the **Rocket 0.7.0**.
+Here you can find some screenshots taken from **Rocket 0.7.0**.
 
 ### Servers
 
